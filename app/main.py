@@ -7,14 +7,14 @@ html = """
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Websocket Demo</title>
+        <title>Vikiscripts Websocket Demo</title>
            <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     </head>
     <body>
     <div class="container mt-3">
-        <h1>FastAPI WebSocket Chat</h1>
+        <h1>VikiScripts WebSocket Chat</h1>
         <h2>Your ID: <span id="ws-id"></span></h2>
         <form action="" onsubmit="sendMessage(event)">
             <input type="text" class="form-control" id="messageText" autocomplete="off"/>
