@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-fastapi-websocket-groupchat-api
+  labels:
+    app: python-fastapi-websocket-groupchat-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-fastapi-websocket-groupchat-api
+  template:
+    metadata:
+      labels:
+        app: python-fastapi-websocket-groupchat-api
+    spec:
+      containers:
+      - name: python-fastapi-websocket-groupchat-api
+        image: vikiscripts/python-fastapi-websocket-groupchat-api:1
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+      imagePullSecrets:
+        - name: vikiscripts-docker-registry-secret
