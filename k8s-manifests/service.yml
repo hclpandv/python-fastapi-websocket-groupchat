@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+# Indicates this as a service
+kind: Service
+metadata:
+ # Service name
+ name: python-fastapi-websocket-groupchat-api
+spec:
+ selector:
+   # Selector for Pods
+   app: python-fastapi-websocket-groupchat-api
+ ports:
+   # Port Map
+ - port: 8080
+   targetPort: 8000
+   protocol: TCP
+ type: NodePort
