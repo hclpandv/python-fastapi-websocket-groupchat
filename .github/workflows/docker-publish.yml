@@ -1,5 +1,5 @@
 ---
-name: Build and deploy Python app to Okteto Cloud
+name: Build and deploy Python app
 
 on:
   push:
