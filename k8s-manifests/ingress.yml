@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: python-fastapi-websocket-groupchat-api
+  name: fastapi-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - http:    
+  - host: tbd.tbd 
+    http:    
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: python-fastapi-websocket-groupchat-api
+            name: fastapi-service
             port:
-              number: 8080
+              number: 8000

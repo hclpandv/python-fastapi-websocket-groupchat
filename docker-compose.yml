@@ -1,9 +1,9 @@
 version: '3.8'
 services:
-  api:
+  fastapi-service:
     container_name: "docker-fastapi-websocket"
     build: .
     ports:
-      - 8080:8000
+      - 8000:8000
     volumes:
       - ./app:/usr/src/app

@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-fastapi-websocket-groupchat-api
+  name: fastapi-deployment
   labels:
-    app: python-fastapi-websocket-groupchat-api
+    app: fastapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python-fastapi-websocket-groupchat-api
+      app: fastapi
   template:
     metadata:
       labels:
-        app: python-fastapi-websocket-groupchat-api
+        app: fastapi
     spec:
       containers:
-      - name: python-fastapi-websocket-groupchat-api
-        image: vikiscripts/python-fastapi-websocket-groupchat-api:1
+      - name: fastapi
+        image: vikiscripts/python-fastapi-websocket-groupchat-api:5
         resources:
           requests:
             cpu: "100m"
