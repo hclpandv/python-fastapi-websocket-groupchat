@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: fastapi
-        image: vikiscripts/python-fastapi-websocket-groupchat-api:8
+        image: vikiscripts/python-fastapi-websocket-groupchat-api:9
         resources:
           requests:
             cpu: "100m"
