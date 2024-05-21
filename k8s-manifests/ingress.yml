@@ -1,30 +1,19 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: fastapi-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  # annotations:
+  #   kubernetes.io/ingress.class: azure/application-gateway
 spec:
-  ingressClassName: webapprouting.kubernetes.azure.com
+  ingressClassName: azure-application-gateway
   rules:
-  # - host: tbd.tbd 
-  - http:    
+  - http:
       paths:
       - path: /
-        pathType: Prefix
         backend:
           service:
             name: fastapi-service
             port:
               number: 8000
-  # rules:
-  # - http:
-  #     paths:
-  #     - path: /
-  #       pathType: Prefix
-  #       backend:
-  #         service:
-  #           name: fastapi-service
-  #           port:
-  #             number: 8000
-
+        pathType: Exact
