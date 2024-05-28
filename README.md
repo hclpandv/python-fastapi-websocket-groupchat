@@ -4,6 +4,14 @@ python-fastapi-websocket-groupchat
 - **To test locally**
 
 ```bash
+# Create a python virtual environment to avoid installing module globally
+python3 -m venv tutorial-env
+
+# activitae the virtual env and install python modules needed to run the application inside the venv
+source tutorial-env/bin/activate
+python3 -m pip install -r requirements.txt
+
+# Go into app dir and launch the application 
 cd app
 uvicorn main:app --reload
 ```
